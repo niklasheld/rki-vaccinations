@@ -1,0 +1,14 @@
+{
+    "domain": "covid19_vaccinations_germany",
+    "name": "COVID-19 Vaccinations Germany",
+    "config_flow": true,
+    "documentation": "https://www.home-assistant.io/integrations/covid19_vaccinations_germany",
+    "requirements": [],
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "dependencies": [],
+    "codeowners": [
+      "@niklasheld"
+    ]
+  }
