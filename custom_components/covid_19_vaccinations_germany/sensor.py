@@ -11,6 +11,14 @@ SENSORS = {
     "doses_biontech": "mdi:needle",
     "doses_astrazeneca": "mdi:needle",
     "doses_moderna": "mdi:needle",
+    "delivered_total": "mdi:truck",
+    "delivered_biontech": "mdi:truck",
+    "delivered_astrazeneca": "mdi:truck",
+    "delivered_moderna": "mdi:truck",
+    "stock_total": "mdi:warehouse",
+    "stock_biontech": "mdi:warehouse",
+    "stock_astrazeneca": "mdi:warehouse",
+    "stock_moderna": "mdi:warehouse",
 }
 
 
@@ -56,4 +64,6 @@ class VaccinationSensor(CoordinatorEntity):
         """Return unit of measurement."""
         if "percent" in self.info_type:
             return PERCENTAGE
+        elif "delivered" in self.info_type or "stock" in self.info_type:
+            return "doses"
         return "people"
