@@ -85,11 +85,11 @@ async def get_vaccination_stats(session: ClientSession):
     """Fetch vacination progress data"""
 
     url_vaccinations = (
-        "https://impfdashboard.de/data/germany_vaccinations_timeseries_v2.9427d633.tsv"
+        "https://impfdashboard.de/static/data/germany_vaccinations_timeseries_v2.tsv"
     )
 
     url_deliveries = (
-        "https://impfdashboard.de/data/germany_deliveries_timeseries_v2.5aef0f71.tsv"
+        "https://impfdashboard.de/static/data/germany_deliveries_timeseries_v2.tsv"
     )
 
     async with session.get(url_vaccinations) as resp_vaccination:
