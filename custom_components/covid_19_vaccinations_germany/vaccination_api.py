@@ -14,14 +14,17 @@ class VaccinationData:
     doses_biontech: int = None
     doses_astrazeneca: int = None
     doses_moderna: int = None
+    doses_johnson: int = None
     delivered_biontech: int = None
     delivered_astrazeneca: int = None
     delivered_moderna: int = None
+    delivered_johnson: int = None
     delivered_total: int = None
     stock_total: int = None
     stock_biontech: int = None
     stock_astrazeneca: int = None
     stock_moderna: int = None
+    stock_johnson: int = None
 
     @staticmethod
     def from_timeseries(tsv_vaccinations, tsv_deliveries):
@@ -57,14 +60,17 @@ class VaccinationData:
         result.doses_biontech = int(vaccinations["dosen_biontech_kumulativ"])
         result.doses_astrazeneca = int(vaccinations["dosen_astrazeneca_kumulativ"])
         result.doses_moderna = int(vaccinations["dosen_moderna_kumulativ"])
+        result.doses_johnson = int(vaccinations["dosen_johnson_kumulativ"])
 
         result.delivered_biontech = delivered_vaccinations_sum(deliveries, "comirnaty")
         result.delivered_astrazeneca = delivered_vaccinations_sum(deliveries, "astra")
         result.delivered_moderna = delivered_vaccinations_sum(deliveries, "moderna")
+        result.delivered_johnson = delivered_vaccinations_sum(deliveries, "johnson")
         result.delivered_total = (
             result.delivered_biontech
             + result.delivered_astrazeneca
             + result.delivered_moderna
+            + result.delivered_johnson
         )
 
         result.stock_total = (
@@ -77,6 +83,7 @@ class VaccinationData:
             result.delivered_astrazeneca - result.doses_astrazeneca
         )
         result.stock_moderna = result.delivered_moderna - result.doses_moderna
+        result.stock_johnson = result.delivered_johnson - result.doses_johnson
 
         return result
 

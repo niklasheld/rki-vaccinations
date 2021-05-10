@@ -11,14 +11,17 @@ SENSORS = {
     "doses_biontech": "mdi:needle",
     "doses_astrazeneca": "mdi:needle",
     "doses_moderna": "mdi:needle",
+    "doses_johnson": "mdi:needle",
     "delivered_total": "mdi:truck",
     "delivered_biontech": "mdi:truck",
     "delivered_astrazeneca": "mdi:truck",
     "delivered_moderna": "mdi:truck",
+    "delivered_johnson": "mdi:truck",
     "stock_total": "mdi:warehouse",
     "stock_biontech": "mdi:warehouse",
     "stock_astrazeneca": "mdi:warehouse",
     "stock_moderna": "mdi:warehouse",
+    "stock_johnson": "mdi:warehouse",
 }
 
 
