@@ -2,7 +2,7 @@
     "domain": "covid19_vaccinations_germany",
     "name": "COVID-19 Vaccinations Germany",
     "config_flow": true,
-    "documentation": "https://www.home-assistant.io/integrations/covid19_vaccinations_germany",
+    "documentation": "https://github.com/niklasheld/rki-vaccinations",
     "requirements": [],
     "ssdp": [],
     "zeroconf": [],
@@ -10,5 +10,6 @@
     "dependencies": [],
     "codeowners": [
       "@niklasheld"
-    ]
+    ],
+    "version": 1.0
   }
