@@ -58,7 +58,7 @@ class VaccinationData:
         )
 
         result.doses_biontech = int(vaccinations["dosen_biontech_kumulativ"])
-        result.doses_astrazeneca = int(vaccinations["dosen_astrazeneca_kumulativ"])
+        result.doses_astrazeneca = int(vaccinations["dosen_astra_kumulativ"])
         result.doses_moderna = int(vaccinations["dosen_moderna_kumulativ"])
         result.doses_johnson = int(vaccinations["dosen_johnson_kumulativ"])
 
