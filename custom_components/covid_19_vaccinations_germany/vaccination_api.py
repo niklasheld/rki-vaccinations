@@ -1,5 +1,6 @@
 import csv
 from dataclasses import dataclass
+
 from aiohttp import ClientSession
 
 
@@ -11,6 +12,7 @@ class VaccinationData:
     vaccinated_one_shot_percentage: float = None
     vaccinated_two_shots_total: int = None
     vaccinated_two_shots_percentage: float = None
+    vaccinated_three_shots_total: int = None
     doses_biontech: int = None
     doses_astrazeneca: int = None
     doses_moderna: int = None
@@ -56,6 +58,7 @@ class VaccinationData:
         result.vaccinated_two_shots_percentage = (
             float(vaccinations["impf_quote_voll"]) * 100
         )
+        result.vaccinated_three_shots_total = int(vaccinations["personen_auffrisch_kumulativ"])
 
         result.doses_biontech = int(vaccinations["dosen_biontech_kumulativ"])
         result.doses_astrazeneca = int(vaccinations["dosen_astra_kumulativ"])
@@ -77,6 +80,7 @@ class VaccinationData:
             result.delivered_total
             - result.vaccinated_one_shot_total
             - result.vaccinated_two_shots_total
+            - result.vaccinated_three_shots_total
         )
         result.stock_biontech = result.delivered_biontech - result.doses_biontech
         result.stock_astrazeneca = (
