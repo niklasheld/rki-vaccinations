@@ -6,6 +6,7 @@ from . import get_coordinator
 SENSORS = {
     "vaccinated_one_shot_total": "mdi:shield-outline",
     "vaccinated_two_shots_total": "mdi:shield",
+    "vaccinated_three_shots_total": "mdi:shield",
     "vaccinated_one_shot_percentage": "mdi:shield-outline",
     "vaccinated_two_shots_percentage": "mdi:shield",
     "doses_biontech": "mdi:needle",
